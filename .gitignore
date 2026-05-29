@@ -1,0 +1,6 @@
+# Entorno virtual
+venv_reservations_GYM/
+
+# Archivos temporales de Python
+__pycache__/
+*.pyc

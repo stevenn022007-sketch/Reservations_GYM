@@ -1,1 +1,3 @@
-#Aca va la informacion de todo el main
+usuarios = {
+    
+}

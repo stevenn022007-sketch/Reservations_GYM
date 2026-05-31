@@ -3,6 +3,7 @@ from rich.panel import Panel
 from rich.align import Align
 import eliminar  # Tu módulo para eliminar
 import crear  # Tu módulo para crear
+import leer_informacion # Tu módulo para leer información
 
 # 1. Inicializamos la consola de Rich
 console = Console()
@@ -49,7 +50,7 @@ while True:
 
     match opcion_usuario:
         case 1:
-            pass
+            leer_informacion.listar_miembros(gimnasio)
         case 2:
             crear.crear_miembro(gimnasio)
         case 3:

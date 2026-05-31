@@ -1,3 +1,64 @@
-usuarios = {
-    
+from rich.console import Console
+from rich.panel import Panel
+from rich.align import Align
+import eliminar  # Tu módulo para eliminar
+
+# 1. Inicializamos la consola de Rich
+console = Console()
+
+gimnasio = {
+    "miembro_1": {"nombre": "Steven", "tipo_suscripcion": "mensual"},
+    "miembro_2": {"nombre": "Andres", "tipo_suscripcion": "mensual"}
 }
+
+# 2. Creamos un título estilizado dentro de un Panel centrado
+bienvenida = Panel(
+    Align.center("[bold italic reverse cyan] 🏋️‍♂️ BIENVENIDO AL MEJOR GYM 🏋️‍♂️ [/bold italic reverse cyan]"),
+    border_style="bold steel_blue1",
+    expand= False
+)
+console.print(bienvenida)
+
+while True:
+    # 3. Diseñamos el menú visual con texto enriquecido
+    menu_texto = (
+        "[bold green]1.[/bold green] 👀 Ver Miembros\n"
+        "[bold green]2.[/bold green] ➕ Crear Miembro\n"
+        "[bold green]3.[/bold green] ❌ Eliminar Miembro\n"
+        "[bold green]4.[/bold green] 📝 Editar Miembro\n"
+        "[bold red]5.[/bold red] 🚪 Salir del Sistema"
+    )
+    
+    # Metemos el menú dentro de un cuadro (Panel)
+    menu_panel = Panel(
+        menu_texto, 
+        title="[bold yellow]Opciones Disponibles[/bold yellow]", 
+        border_style="bright_magenta",
+        expand = False
+    )
+    console.print(menu_panel)
+    
+    # 4. Entrada de datos estilizada con Console
+    # Usamos try-except por si el usuario presiona letras en lugar de números
+    try:
+        opcion_usuario = int(console.input("\n[bold orange1]👉 Ingrese la opción (1 a 5): [/bold orange1]"))
+    except ValueError:
+        console.print("\n[bold red]⚠ Error: Por favor, introduce solo números.[/bold red]")
+        continue
+
+    match opcion_usuario:
+        case 1:
+            pass
+        case 2:
+            pass
+        case 3:
+            eliminar.eliminar_miembro(gimnasio)
+        case 4:
+            pass
+        case 5:
+            console.print("\n[bold italic white on red] 👋 ¡Gracias por usar el sistema! Saliendo... [/bold italic white on red]\n")
+            break
+        case _:
+            console.print("\n[bold red]❌ Opción inválida. Intenta de nuevo.[/bold red]")
+    
+        

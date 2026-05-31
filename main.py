@@ -2,6 +2,7 @@ from rich.console import Console
 from rich.panel import Panel
 from rich.align import Align
 import eliminar  # Tu módulo para eliminar
+import crear  # Tu módulo para crear
 
 # 1. Inicializamos la consola de Rich
 console = Console()
@@ -50,7 +51,7 @@ while True:
         case 1:
             pass
         case 2:
-            pass
+            crear.crear_miembro(gimnasio)
         case 3:
             eliminar.eliminar_miembro(gimnasio)
         case 4:

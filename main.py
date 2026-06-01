@@ -12,7 +12,13 @@ gimnasio = {
     "miembro_1": {"nombre": "Steven", "tipo_suscripcion": "mensual"},
     "miembro_2": {"nombre": "Andres", "tipo_suscripcion": "mensual"}
 }
-
+#diccionario para clases
+clases = {
+    "clase_1": {"nombre_clase": "Yoga", "instructor": "Eliana", "horario": "Lunes 7:00 AM a 9:00 AM", "cupo_maximo": 20},
+    "clase_2": {"nombre_clase": "Zumba", "instructor": "Gabriel", "horario": "Martes 6:00 PM a 8:00 PM", "cupo_maximo": 25},
+    "clase_3": {"nombre_clase": "Crossfit", "instructor": "Lina", "horario": "Miércoles 5:00 PM a 7:00 PM", "cupo_maximo": 15},
+    "clase_4": {"nombre_clase": "Calistenia", "instructor": "Leonardo", "horario": "Jueves 8:00 AM a 10:00 AM", "cupo_maximo": 18},
+}
 # 2. Creamos un título estilizado dentro de un Panel centrado
 bienvenida = Panel(
     Align.center("[bold italic reverse cyan] 🏋️‍♂️ BIENVENIDO AL MEJOR GYM 🏋️‍♂️ [/bold italic reverse cyan]"),
@@ -24,11 +30,16 @@ console.print(bienvenida)
 while True:
     # 3. Diseñamos el menú visual con texto enriquecido
     menu_texto = (
+        "[bold cyan]     ── MIEMBROS ──[/bold cyan]\n"
         "[bold green]1.[/bold green] 👀 Ver Miembros\n"
         "[bold green]2.[/bold green] ➕ Crear Miembro\n"
         "[bold green]3.[/bold green] ❌ Eliminar Miembro\n"
         "[bold green]4.[/bold green] 📝 Editar Miembro\n"
-        "[bold red]5.[/bold red] 🚪 Salir del Sistema"
+        "[bold cyan]     ── CLASES ──[/bold cyan]\n"
+        "[bold green]5.[/bold green] 👀 Ver Clases\n"
+        "[bold green]6.[/bold green] ➕ Crear Clase\n"
+        "[bold green]7.[/bold green] ❌ Eliminar Clase\n"
+        "[bold red]8.[/bold red] 🚪 Salir del Sistema"
     )
     
     # Metemos el menú dentro de un cuadro (Panel)
@@ -43,7 +54,7 @@ while True:
     # 4. Entrada de datos estilizada con Console
     # Usamos try-except por si el usuario presiona letras en lugar de números
     try:
-        opcion_usuario = int(console.input("\n[bold orange1]👉 Ingrese la opción (1 a 5): [/bold orange1]"))
+        opcion_usuario = int(console.input("\n[bold orange1]👉 Ingrese la opción (1 a 8): [/bold orange1]"))
     except ValueError:
         console.print("\n[bold red]⚠ Error: Por favor, introduce solo números.[/bold red]")
         continue
@@ -58,6 +69,14 @@ while True:
         case 4:
             pass
         case 5:
+            pass
+        case 6:
+            crear.crear_clase(clases)
+            break
+        case 7:
+            pass
+            break
+        case 8:
             console.print("\n[bold italic white on red] 👋 ¡Gracias por usar el sistema! Saliendo... [/bold italic white on red]\n")
             break
         case _:

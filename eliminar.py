@@ -7,6 +7,13 @@ def eliminar_miembro(lista_miembros):
         
     else:
         print(f"El ID {eliminar_por_id} no se encuentra en la base de datos")
+        
+
+def eliminar_clase(lista_clases):
+    eliminar_clase_por_id = input("Ingrese la clase que desea eliminar por ID: ").lower()
+    
+    if eliminar_clase_por_id in lista_clases:
+        lista_clases.pop(eliminar_clase_por_id)
+        print(f"El ID {eliminar_clase_por_id} fue eliminado exitosamente")
 
 
-         

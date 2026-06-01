@@ -5,9 +5,6 @@ import eliminar  # Tu módulo para eliminar
 import crear  # Tu módulo para crear
 import leer_informacion # Tu módulo para leer información
 
-# 1. Inicializamos la consola de Rich
-console = Console()
-
 gimnasio = {
     "miembro_1": {"nombre": "Steven", "tipo_suscripcion": "mensual"},
     "miembro_2": {"nombre": "Andres", "tipo_suscripcion": "mensual"}
@@ -19,6 +16,9 @@ clases = {
     "clase_3": {"nombre_clase": "Crossfit", "instructor": "Lina", "horario": "Miércoles 5:00 PM a 7:00 PM", "cupo_maximo": 15},
     "clase_4": {"nombre_clase": "Calistenia", "instructor": "Leonardo", "horario": "Jueves 8:00 AM a 10:00 AM", "cupo_maximo": 18},
 }
+
+# 1. Inicializamos la consola de Rich
+console = Console()
 # 2. Creamos un título estilizado dentro de un Panel centrado
 bienvenida = Panel(
     Align.center("[bold italic reverse cyan] 🏋️‍♂️ BIENVENIDO AL MEJOR GYM 🏋️‍♂️ [/bold italic reverse cyan]"),

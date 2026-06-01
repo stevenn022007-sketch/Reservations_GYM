@@ -72,10 +72,8 @@ while True:
             pass
         case 6:
             crear.crear_clase(clases)
-            break
         case 7:
-            pass
-            break
+            eliminar.eliminar_clase(clases)
         case 8:
             console.print("\n[bold italic white on red] 👋 ¡Gracias por usar el sistema! Saliendo... [/bold italic white on red]\n")
             break

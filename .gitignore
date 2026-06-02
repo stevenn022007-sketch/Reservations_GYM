@@ -1,6 +1,7 @@
 # Entorno virtual
 venv/
 venv_reservations_GYM/
+Steph_venv/
 
 # Archivos temporales de Python
 __pycache__/

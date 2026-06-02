@@ -4,6 +4,7 @@ from rich.align import Align
 import eliminar  # Tu módulo para eliminar
 import crear  # Tu módulo para crear
 import leer_informacion # Tu módulo para leer información
+import actualizar # modulo para actualizar informacion
 
 gimnasio = {
     "miembro_1": {"nombre": "Steven", "tipo_suscripcion": "mensual"},
@@ -67,7 +68,7 @@ while True:
         case 3:
             eliminar.eliminar_miembro(gimnasio)
         case 4:
-            pass
+            actualizar.actulizar_miembro(gimnasio)
         case 5:
             pass
         case 6:
